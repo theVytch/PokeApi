@@ -4,24 +4,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class Type {
 
-    private Integer slot;
-
     @JsonProperty("type")
     private TypeName typeName;
 
     private Type(){}
 
-    public Type(Integer slot, TypeName typeName) {
-        this.slot = slot;
+    public Type(TypeName typeName) {
         this.typeName = typeName;
-    }
-
-    public Integer getSlot() {
-        return slot;
-    }
-
-    public void setSlot(Integer slot) {
-        this.slot = slot;
     }
 
     public TypeName getTypeName() {
